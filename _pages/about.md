@@ -2,13 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. student, Graduate School of Data Science, Seoul National University
+subtitle: Ph.D. student, SNU Causality Lab, Seoul National University
 
 profile:
   align: right
   image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >
+    <p>SNU Causality Lab</p>
     <p>Graduate School of Data Science</p>
     <p>Seoul National University</p>
     <p>Seoul, Korea</p>
@@ -29,7 +30,7 @@ latest_posts:
 
 During ICML (0706--0711), please feel free to reach out! I will be attending the [EIML workshop](https://icml.cc/virtual/2026/workshop/54075) (0710) with our spotlight paper, "A Tale of Two Uncertainties: Global-Local Attribution for Conformal Prediction," which studies how global and local attribution can make uncertainty in conformal prediction easier to interpret. If you are also at ICML, I would be happy to meet and chat.
 
-I am a Ph.D. student at the Graduate School of Data Science, Seoul National University. My research interests include causal inference, representation learning, conformal prediction, and trustworthy machine learning
+I am a Ph.D. student in the [SNU Causality Lab](https://www.sanghacklee.me/#lab) at the Graduate School of Data Science, Seoul National University, advised by Prof. [Sanghack Lee](https://www.sanghacklee.me/). My research interests include causal inference, representation learning, conformal prediction, and trustworthy machine learning.
 <!-- with recent work on uncertainty-aware explanations, instrumental-variable representation learning, and AI accountability.  -->
 <!-- You can find a brief CV [here](/assets/pdf/cv.pdf). -->
 
