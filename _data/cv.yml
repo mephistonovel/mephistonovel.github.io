@@ -56,14 +56,6 @@ cv:
         url: https://openreview.net/forum?id=2aIvedJMpp
         summary: Spotlight paper.
 
-      - title: "When Mass Atrocities Come to Light in the Artificial Eyes in the Sky: AI and the Use of Satellite Images for International Criminal Accountability"
-        authors:
-          - "*Jungsoo Kim*"
-          - Heejin Kim
-          - Sanghack Lee
-        journal: Under review
-        date: "2025"
-
       - title: Instrumental Variable Representation Learning under Confounded Covariates
         authors:
           - "*Jungsoo Kim*"
