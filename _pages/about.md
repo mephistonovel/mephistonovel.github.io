@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Ph.D. student, Graduate School of Data Science, Seoul National University
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Graduate School of Data Science</p>
+    <p>Seoul National University</p>
+    <p>Seoul, Korea</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +27,12 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+During ICML, please feel free to reach out! I will be attending the [EIML workshop](https://icml.cc/virtual/2026/workshop/54075) with our spotlight paper, "A Tale of Two Uncertainties: Global-Local Attribution for Conformal Prediction," which studies how global and local attribution can make uncertainty in conformal prediction easier to interpret. If you are also at ICML, I would be happy to meet and chat.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am a Ph.D. student at the Graduate School of Data Science, Seoul National University. My research interests include causal inference, representation learning, conformal prediction, and trustworthy machine learning
+<!-- with recent work on uncertainty-aware explanations, instrumental-variable representation learning, and AI accountability.  -->
+<!-- You can find a brief CV [here](/assets/pdf/cv.pdf). -->
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Before SNU, I studied Science, Technology and Policy and Quantitative Risk Management at Yonsei University's Underwood International College, with an exchange semester in Mathematical and Computational Science at Yale-NUS College. Welcome anyone who has interest in questions that sit between statistical evidence, policy decisions, and real-world systems.
+
+<!-- I am also a writer, and I tend to approach research and writing as different ways of making ideas convincing. My science fiction was recognized at the 5th POSTECH SF Award and included in the anthology *Diagonal Argument*. I enjoy working as a generalist across data science, policy, and narrative problems. -->
