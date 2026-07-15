@@ -28,9 +28,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-At ICML 2026 (July 6--11), I attended the [EIML workshop](https://icml.cc/virtual/2026/workshop/54075) with our spotlight paper, "A Tale of Two Uncertainties: Global-Local Attribution for Conformal Prediction," which studies how global and local attribution can make uncertainty in conformal prediction easier to interpret. I also posted an [ICML 2026 poster photo summary](/icml-2026-poster-summary/) with notes grouped around causal roles, representation learning, and causal reasoning.
-
-I am a Ph.D. student in the [Causality Lab](https://www.sanghacklee.me/#lab) at the Graduate School of Data Science, Seoul National University, advised by Prof. [Sanghack Lee](https://www.sanghacklee.me/). My research interests include causal inference, representation learning, conformal prediction, and trustworthy machine learning.
+I am a Ph.D. student in the [Causality Lab](https://www.sanghacklee.me/#lab) at the Graduate School of Data Science, Seoul National University, advised by Prof. [Sanghack Lee](https://www.sanghacklee.me/). My research interests include causal inference, representation learning, conformal prediction, and trustworthy machine learning. Recently, our paper, "A Tale of Two Uncertainties: Global-Local Attribution for Conformal Prediction," which studies how global and local attribution can make the uncertainty behind conformal prediction more interpretable, was accepted as a spotlight paper at the EIML workshop at ICML 2026.
 <!-- with recent work on uncertainty-aware explanations, instrumental-variable representation learning, and AI accountability.  -->
 <!-- You can find a brief CV [here](/assets/pdf/cv.pdf). -->
 
