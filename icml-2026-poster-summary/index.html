@@ -1,0 +1,521 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> ICML 2026 Poster Photo Summary | Jungsoo Kim </title> <meta name="author" content="Jungsoo Kim"> <meta name="description" content="Poster notes from ICML 2026 grouped by variable causal role, representation learning, causal reasoning, and other topics."> <meta name="keywords" content="causal inference, representation learning, trustworthy AI, uncertainty"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://mephistonovel.github.io/icml-2026-poster-summary/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Jungsoo Kim </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">ICML 2026 Poster Photo Summary</h1> <p class="post-description">Poster notes from ICML 2026 grouped by variable causal role, representation learning, causal reasoning, and other topics.</p> </header> <article> <p>사진 파일에서 직접 읽은 제목과 포스터 내용을 바탕으로 정리했다. 제목/본문이 가려졌거나 비스듬한 사진은 보이는 범위에서 요약했고, 그런 경우 <code class="language-plaintext highlighter-rouge">확인 필요</code>를 붙였다.</p> <p>분류 기준:</p> <ul> <li> <code class="language-plaintext highlighter-rouge">variable causal role</code>: treatment, covariate, confounder, mechanism shift, instrument, spurious feature처럼 변수의 인과적 역할을 직접 다루는 논문</li> <li> <code class="language-plaintext highlighter-rouge">representation learning</code>: latent/token/feature/embedding/SAE/foundation representation을 직접 다루는 논문</li> <li> <code class="language-plaintext highlighter-rouge">causal reasoning</code>: intervention, counterfactual, causal graph, causal uncertainty, causal/physical reasoning을 직접 다루는 논문</li> <li> <code class="language-plaintext highlighter-rouge">기타</code>: 통계 추론, conformal/decision, LLM 분석, governance/legal evaluation 등 위 세 축에 직접 속하지 않는 논문</li> </ul> <h2 id="1-variable-causal-role">1. Variable Causal Role</h2> <h3 id="local-covariate-selection-for-average-causal-effect-estimation-without-pretreatment-and-causal-sufficiency-assumptions">Local Covariate Selection for Average Causal Effect Estimation without Pretreatment and Causal Sufficiency Assumptions</h3> <p>유형: <code class="language-plaintext highlighter-rouge">variable causal role</code>, <code class="language-plaintext highlighter-rouge">causal reasoning</code></p> <p><img src="/assets/img/icml_2026/IMG_1782.jpeg" width="720"></p> <p>내용: 평균 인과효과 추정을 위해 어떤 관측 공변량을 adjustment set으로 골라야 하는지 다룬다. pretreatment assumption, causal sufficiency, global structure learning 없이 local conditional independence 정보로 유효한 adjustment set을 찾는 문제를 설정한다.</p> <p>Contribution: LCS라는 local covariate selection 방법을 제안하고, identifiable effect/zero effect/non-identifiable 상황을 구분하는 규칙과 이론적 soundness/completeness를 제시한다. synthetic graph와 Cattaneo2, Jobs 데이터에서 기존 local method보다 낮은 bias와 안정적인 성능을 보인다.</p> <h3 id="dissecting-causal-mechanism-shifts-via-fans-function-and-noise-separation">Dissecting Causal Mechanism Shifts via FANS: Function And Noise Separation</h3> <p>유형: <code class="language-plaintext highlighter-rouge">variable causal role</code>, <code class="language-plaintext highlighter-rouge">causal reasoning</code></p> <p><img src="/assets/img/icml_2026/IMG_1785.jpeg" width="720"></p> <p>추가 사진: <a href="/assets/img/icml_2026/IMG_1793.jpeg">IMG_1793.jpeg</a></p> <p>내용: 환경 변화가 causal mechanism의 function shift인지 noise shift인지 분리하는 문제를 다룬다. causal DAG와 두 환경의 데이터를 입력으로 받아, causal normalizing flow를 이용해 counterfactual distribution divergence를 계산한다.</p> <p>Contribution: FANS는 shift detection과 shift type dissection을 하나의 프레임워크로 묶고, additive noise를 넘는 nonlinear/non-additive 설정까지 다룬다. synthetic data와 Morpho-MNIST에서 shift node/type을 기존 방법보다 잘 찾아낸다.</p> <h3 id="learning-treatment-allocations-with-risk-control-under-partial-identifiability">Learning Treatment Allocations with Risk Control Under Partial Identifiability</h3> <p>유형: <code class="language-plaintext highlighter-rouge">variable causal role</code>, <code class="language-plaintext highlighter-rouge">causal reasoning</code></p> <p><img src="/assets/img/icml_2026/IMG_1794.jpeg" width="720"></p> <p>내용: precision medicine에서 treatment allocation policy를 학습하되, unobserved confounding이나 selection 때문에 risk가 부분적으로만 식별되는 상황을 다룬다.</p> <p>Contribution: miscalibration 정도를 <code class="language-plaintext highlighter-rouge">Gamma</code>로 두고 allocation risk와 treatment risk의 upper bound를 사용해 certifiable risk control을 제공한다. sample splitting 기반으로 policy와 tolerance를 나누어 학습하고, synthetic/STAR 데이터에서 해석 가능한 정책을 얻는다.</p> <h3 id="causal-representation-learning-with-optimal-compression-under-complex-treatments">Causal Representation Learning with Optimal Compression under Complex Treatments</h3> <p>유형: <code class="language-plaintext highlighter-rouge">variable causal role</code>, <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1795.jpeg" width="720"></p> <p>내용: 복잡한 multi-treatment setting에서 confounding을 줄이면서 predictive information을 보존하는 causal representation을 학습한다. treatment cardinality가 커질 때 pairwise balancing이 계산량과 통계적 안정성 면에서 무너지는 문제를 지적한다.</p> <p>Contribution: representation compression과 balancing의 trade-off를 최적화하는 BOAB/aggregation 접근을 제안한다. treatment aggregation으로 constraint 수를 줄이고, semi-synthetic 실험 및 multi-treatment CausalEGM 확장에서 성능을 보인다.</p> <h3 id="estimating-continuous-treatment-effects-with-two-stage-kernel-ridge-regression">Estimating Continuous Treatment Effects with Two-Stage Kernel Ridge Regression</h3> <p>유형: <code class="language-plaintext highlighter-rouge">variable causal role</code></p> <p><img src="/assets/img/icml_2026/IMG_1832.jpeg" width="720"></p> <p>내용: continuous treatment와 covariate가 있을 때 dose-response/continuous treatment effect function을 추정하는 문제다. nuisance conditional density를 직접 추정하지 않고 two-stage KRR로 pseudo-outcome을 만든 뒤 target curve를 학습한다.</p> <p>Contribution: Sobolev case에 대한 upper bound와 model selection/adaptivity 보장을 제시한다. coverage/overlap을 나타내는 <code class="language-plaintext highlighter-rouge">gamma</code>와 eigenvalue decay를 고려하고, Job Corps semi-real experiment에서 plug-in KRR, direct regression, DML 계열보다 낮은 MISE를 보인다.</p> <h3 id="nonlinear-covariate-balance-in-experimental-design">Nonlinear Covariate Balance in Experimental Design</h3> <p>유형: <code class="language-plaintext highlighter-rouge">variable causal role</code></p> <p><img src="/assets/img/icml_2026/IMG_1833.jpeg" width="720"></p> <p>내용: randomized controlled trial에서 treatment/control assignment가 단순 평균만 맞추면 nonlinear imbalance가 남는 문제를 다룬다.</p> <p>Contribution: Gram-Schmidt Walk를 nonlinear Gram matrix로 확장한 Nonlinear-GSW를 제안한다. 고차 공변량 균형과 assignment robustness 사이의 trade-off를 조절하며, low-rank approximation으로 계산량도 줄인다.</p> <h3 id="modeling-covariate-transition-for-efficient-estimation-of-longitudinal-treatment-effects-in-randomized-experiments">Modeling Covariate Transition for Efficient Estimation of Longitudinal Treatment Effects in Randomized Experiments</h3> <p>유형: <code class="language-plaintext highlighter-rouge">variable causal role</code></p> <p><img src="/assets/img/icml_2026/IMG_1834.jpeg" width="720"></p> <p>내용: randomized longitudinal experiment에서 treatment effect를 효율적으로 추정하기 위해 시간에 따라 변하는 covariate transition을 모델링한다.</p> <p>Contribution: longitudinal treatment effect estimation에서 covariate transition을 활용해 variance/efficiency를 개선하는 방법을 제안한다. 포스터의 simulation study 중심으로, 단순 estimator보다 효율적인 추정이 가능함을 보인다.</p> <h3 id="feasible-fusion-constrained-joint-estimation-under-structural-non-overlap">Feasible Fusion: Constrained Joint Estimation under Structural Non-Overlap</h3> <p>유형: <code class="language-plaintext highlighter-rouge">variable causal role</code></p> <p><img src="/assets/img/icml_2026/IMG_1855.jpeg" width="720"></p> <p>내용: structural non-overlap이 있는 데이터에서 여러 estimator나 source를 무리하게 합치면 bias/variance 문제가 생기는 상황을 다룬다.</p> <p>Contribution: overlap 제약을 명시한 joint estimation/fusion 프레임워크를 제안한다. 관측 가능한 영역과 식별 가능한 영역을 구분하며, structural non-overlap 아래에서도 feasible한 결합 추정을 목표로 한다.</p> <h3 id="learning-treatment-representations-for-downstream-instrumental-variable-regression">Learning Treatment Representations for Downstream Instrumental Variable Regression</h3> <p>유형: <code class="language-plaintext highlighter-rouge">variable causal role</code>, <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1857.jpeg" width="720"></p> <p>내용: downstream instrumental variable regression에 유용한 treatment representation을 학습하는 문제다. treatment 자체가 복잡하거나 고차원일 때 IV 추정에 맞는 표현을 만드는 데 초점을 둔다.</p> <p>Contribution: treatment representation을 downstream IV objective와 연결해 학습하고, 단순 feature 사용보다 IV regression의 안정성과 예측/추정 성능을 높이는 방향을 제시한다.</p> <h3 id="causal-aware-anomaly-detection-for-tabular-data">Causal-aware Anomaly Detection for Tabular Data</h3> <p>유형: <code class="language-plaintext highlighter-rouge">variable causal role</code>, <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1865.jpeg" width="720"></p> <p>내용: tabular anomaly가 반드시 극단값은 아니며, 변수 간 causal dependency를 위반하는 표본일 수 있다는 관점에서 anomaly detection을 다룬다.</p> <p>Contribution: causal graph 기반 representation learning과 latent anomaly scoring을 결합한 CausalAno를 제안한다. discriminator embedding과 Mahalanobis distance를 사용하며, 28개 tabular AD benchmark에서 강한 성능을 보인다.</p> <h3 id="is-spurious-correlation-removal-always-learnable">Is Spurious Correlation Removal Always Learnable?</h3> <p>유형: <code class="language-plaintext highlighter-rouge">variable causal role</code>, <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1866.jpeg" width="720"></p> <p>내용: spurious correlation을 제거하는 것이 항상 학습 가능한지 이론적으로 분석한다. invariant/spurious feature가 섞인 환경에서 diversity와 regularity가 어떤 역할을 하는지 다룬다.</p> <p>Contribution: spurious correlation removal의 learnability 조건과 minimax risk/phase transition을 제시한다. diverse environment가 항상 도움이 되는 것은 아니며, 충분한 다양성과 regularity 조건이 필요함을 보인다.</p> <h3 id="exactly-computing-do-shapley-values">Exactly Computing do-Shapley Values</h3> <p>유형: <code class="language-plaintext highlighter-rouge">variable causal role</code>, <code class="language-plaintext highlighter-rouge">causal reasoning</code></p> <p><img src="/assets/img/icml_2026/IMG_1876.jpeg" width="720"></p> <p>내용: 변수의 contribution을 단순 Shapley가 아니라 intervention <code class="language-plaintext highlighter-rouge">do(.)</code> 관점에서 계산하는 문제를 다룬다.</p> <p>Contribution: do-Shapley 값을 정확히 계산하는 알고리즘/공식을 제시한다. causal graph에서 변수의 개입 효과 기반 attribution을 다루므로 feature attribution과 causal effect 해석을 연결한다.</p> <h2 id="2-representation-learning">2. Representation Learning</h2> <h3 id="identifiable-token-correspondence-for-world-models">Identifiable Token Correspondence for World Models</h3> <p>유형: <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1797.jpeg" width="720"></p> <p>내용: world model rollout에서 object가 duplicate, vanish, transmute되는 문제를 token correspondence 관점에서 해결한다. 연속 프레임의 entity가 대부분 공유된다는 점을 이용해 token을 매번 새로 생성하지 않고 재사용한다.</p> <p>Contribution: optimal transport로 frame-to-frame token correspondence를 찾는 ITC decoding을 제안한다. retraining 없이 plug-and-play로 적용 가능하며, Craftax/MinAtar/Atari world model에서 next-state accuracy와 return을 개선한다.</p> <h3 id="evaluating-the-representation-space-of-diffusion-models-via-self-supervised-principles">Evaluating the Representation Space of Diffusion Models via Self-Supervised Principles</h3> <p>유형: <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1798.jpeg" width="720"></p> <p>내용: diffusion model이 denoising만으로도 self-supervised representation learner처럼 동작하는지 평가한다. augmentation/diffusion noise 아래 invariant component와 residual component를 분해한다.</p> <p>Contribution: Invariant Contamination Ratio(ICR)를 제안해 diffusion representation의 semantic window, memorization onset, feature expansion을 label-free/sample-free로 추적한다. diffusion model의 learned representation geometry를 외부 probe 없이 모니터링할 수 있음을 보인다.</p> <h3 id="guda-counterfactual-group-wise-training-data-attribution-for-diffusion-models-via-unlearning">GUDA: Counterfactual Group-wise Training Data Attribution for Diffusion Models via Unlearning</h3> <p>유형: <code class="language-plaintext highlighter-rouge">representation learning</code>, <code class="language-plaintext highlighter-rouge">causal reasoning</code></p> <p><img src="/assets/img/icml_2026/IMG_1799.jpeg" width="720"></p> <p>내용: 생성 이미지에 어떤 training data group이 영향을 주었는지 group-wise attribution을 추정한다. leave-one-group-out retraining은 gold standard지만 비용이 크므로 unlearning으로 counterfactual model을 근사한다.</p> <p>Contribution: GUDA는 unlearned model을 이용해 LOGOA counterfactual attribution score를 근사한다. diffusion model에서 group removal effect를 효율적으로 계산하고, fair compensation/debugging/데이터 provenance에 쓸 수 있는 그룹 단위 설명을 제공한다.</p> <h3 id="ensembling-sparse-autoencoders">Ensembling Sparse Autoencoders</h3> <p>유형: <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1827.jpeg" width="720"></p> <p>내용: LLM activation을 해석 가능한 sparse feature로 분해하는 SAE를 여러 개 ensemble하는 문제다.</p> <p>Contribution: naive bagging과 boosting 방식의 SAE ensemble을 비교한다. reconstruction stability, interpretability, concept detection, spurious correlation removal에서 ensemble이 단일 SAE보다 유용할 수 있음을 보인다.</p> <h3 id="causes-and-consequences-of-representational-similarity-in-machine-learning-models">Causes and Consequences of Representational Similarity in Machine Learning Models</h3> <p>유형: <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1831.jpeg" width="720"></p> <p>내용: 모델 간 representational similarity가 왜 생기고 downstream에서 어떤 영향을 주는지 분석한다. dataset overlap과 task overlap이 similarity에 미치는 영향을 실험적으로 분리한다.</p> <p>Contribution: vision/language 모델에서 데이터셋 및 task overlap이 representation similarity를 높인다는 결과를 보인다. vision model에서는 similarity가 높을수록 adversarial attack transferability가 증가하는 downstream risk도 확인한다.</p> <h3 id="representation-learning-for-equivariant-inference-with-guarantees">Representation Learning for Equivariant Inference with Guarantees</h3> <p>유형: <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1835.jpeg" width="720"></p> <p>내용: 대칭성/symmetry prior를 이용해 equivariant representation을 학습하고 uncertainty quantification이 가능한 inference를 수행하는 문제다. 사진 일부가 사람에게 가려져 세부 수식은 확인이 제한적이다.</p> <p>Contribution: Neural Conditional Probabilities와 symmetry prior를 결합해 equivariant inference에 대한 보장을 제공하는 방향을 제시한다. regression 및 uncertainty quantification 실험으로 표본 효율성과 calibration을 평가한다.</p> <h3 id="curve-learning-causality-inspired-invariant-representations-for-robust-scene-understanding-via-uncertainty-guided-regularization">CURVE: Learning Causality-Inspired Invariant Representations for Robust Scene Understanding via Uncertainty-Guided Regularization</h3> <p>유형: <code class="language-plaintext highlighter-rouge">representation learning</code>, <code class="language-plaintext highlighter-rouge">causal reasoning</code></p> <p><img src="/assets/img/icml_2026/IMG_1853.jpeg" width="720"></p> <p>내용: scene graph learning과 out-of-distribution generalization을 목표로, causality-inspired invariant representation을 학습한다.</p> <p>Contribution: uncertainty-guided regularization으로 robust scene understanding을 위한 invariant feature를 강화한다. domain shift나 spurious scene pattern에 덜 민감한 representation을 만들려는 접근이다.</p> <h3 id="toward-identifiable-sparse-autoencoders">Toward Identifiable Sparse Autoencoders</h3> <p>유형: <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1854.jpeg" width="720"></p> <p>내용: 같은 데이터와 같은 SAE 구조라도 학습 결과가 달라질 수 있다는 문제에서 출발해, sparse autoencoder feature의 식별 가능성을 다룬다.</p> <p>Contribution: stable dictionariness/identifiability를 위한 이론적 조건과 실험 분석을 제시한다. SAE feature가 모델 해석에서 신뢰 가능한 단위가 되기 위한 조건을 탐색한다.</p> <h3 id="learning-world-models-through-object-level-latent-masking">Learning World Models through Object-Level Latent Masking</h3> <p>유형: <code class="language-plaintext highlighter-rouge">representation learning</code>, <code class="language-plaintext highlighter-rouge">causal reasoning</code></p> <p><img src="/assets/img/icml_2026/IMG_1862.jpeg" width="720"></p> <p>내용: visual reasoning/world model 학습에서 object-level latent masking을 사용해 객체 단위의 world dynamics를 학습한다.</p> <p>Contribution: object-level latent를 마스킹하며 world model을 학습함으로써 visual reasoning 및 counterfactual VQA 성능을 높이는 방향을 제시한다. 객체 중심 표현을 통해 causal/relational reasoning에 더 적합한 latent를 만든다.</p> <h3 id="sleepfm-a-universal-sleep-foundation-model-for-integrating-actigraphy-and-micro-structures">SleepFM: A Universal Sleep Foundation Model for Integrating Actigraphy and Micro-Structures</h3> <p>유형: <code class="language-plaintext highlighter-rouge">representation learning</code>, <code class="language-plaintext highlighter-rouge">기타</code></p> <p><img src="/assets/img/icml_2026/IMG_1851.jpeg" width="720"></p> <p>내용: sleep 관련 actigraphy와 micro-structure 신호를 통합하는 foundation model을 제안한다.</p> <p>Contribution: 다양한 sleep downstream task에 적용 가능한 통합 representation을 학습한다. sleep stage/biomarker/health prediction 등에서 범용 feature extractor 역할을 목표로 한다.</p> <h2 id="3-causal-reasoning">3. Causal Reasoning</h2> <h3 id="hierarchical-causal-abduction-for-explainable-model-predictive-control-mpc">Hierarchical Causal Abduction for Explainable Model Predictive Control (MPC)</h3> <p>유형: <code class="language-plaintext highlighter-rouge">causal reasoning</code></p> <p><img src="/assets/img/icml_2026/IMG_1784.jpeg" width="720"></p> <p>내용: black-box MPC decision을 operator가 이해할 수 있도록 faithful한 한 문장 설명으로 바꾸는 문제다. physics, optimization, temporal causality를 결합해 “왜 이 action을 선택했는가”를 설명한다.</p> <p>Contribution: HCA는 KKT optimization, knowledge graph physics, PCMCI temporal evidence를 계층적으로 ranking하고, candidate driver를 counterfactual re-solve로 검증한다. greenhouse, HVAC, chemical plant domain에서 LIME/SHAP보다 높은 explanation accuracy를 보인다.</p> <h3 id="from-prompts-to-tokens-internalizing-causal-supervision-in-vision-language-model-for-multi-image-causal-reasoning">From Prompts to Tokens: Internalizing Causal Supervision in Vision-Language Model for Multi-Image Causal Reasoning</h3> <p>유형: <code class="language-plaintext highlighter-rouge">causal reasoning</code>, <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1825.jpeg" width="720"></p> <p>내용: multi-image causal reasoning에서 causal supervision을 단순 prompt text로 붙이는 것은 약한 interface라고 보고, 모델 내부 token 구조에 causal knowledge를 주입한다.</p> <p>Contribution: BridgeVLM은 multi-image evidence에서 variable-level causal structure를 유도하고, DAG-conditioned routing과 causal tokens를 LLM decoder에 넣는다. C3D/CVLBench intervention/counterfactual task에서 prompt-only나 finetuning보다 큰 향상을 보인다.</p> <h3 id="use-what-you-know-causal-foundation-models-with-partial-graphs">Use What You Know: Causal Foundation Models with Partial Graphs</h3> <p>유형: <code class="language-plaintext highlighter-rouge">causal reasoning</code>, <code class="language-plaintext highlighter-rouge">variable causal role</code></p> <p><img src="/assets/img/icml_2026/IMG_1829.jpeg" width="720"></p> <p>내용: causal foundation model이 observational data만 쓰지 않고, 부분적으로 알려진 causal graph knowledge를 조건으로 사용할 수 있게 하는 문제다.</p> <p>Contribution: Partially Known Ancestor Matrix(PAM)를 graph-conditioning signal로 주입한다. soft attention biasing과 GCN/AdaLN 기반 인코딩으로 partial causal knowledge를 활용해 causal inference prediction을 개선한다.</p> <h3 id="interventional-processes-for-causal-uncertainty-quantification">Interventional Processes for Causal Uncertainty Quantification</h3> <p>유형: <code class="language-plaintext highlighter-rouge">causal reasoning</code></p> <p><img src="/assets/img/icml_2026/IMG_1837.jpeg" width="720"></p> <p>추가 사진: <a href="/assets/img/icml_2026/IMG_1838.jpeg">IMG_1838.jpeg</a></p> <p>내용: causal function에 대한 uncertainty quantification을 위해 interventional process를 모델링한다.</p> <p>Contribution: observational/process prior만으로는 부족한 causal uncertainty를 intervention-aware process로 다루며, simulation에서 uncertainty quantification performance를 평가한다. causal function의 불확실성을 명시적으로 추정하는 방향의 방법이다.</p> <h3 id="geometric-collapse-when-vision-models-fail-to-verify-physical-causality">Geometric Collapse: When Vision Models Fail to Verify Physical Causality</h3> <p>유형: <code class="language-plaintext highlighter-rouge">causal reasoning</code>, <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1852.jpeg" width="720"></p> <p>내용: vision transformer/vision model이 물리적 인과성을 검증해야 하는 scramble diagnostic에서 실패하는 현상을 다룬다.</p> <p>Contribution: perturbation, relocation, rotation, darkening 등 물리적/시각적 조작 조건에서 모델 representation이 causal physical relation을 보존하지 못하는 geometric collapse 현상을 분석한다. global propagation/evaluation으로 모델의 물리 인과 검증 실패를 보여준다.</p> <h3 id="physics-from-video">Physics from Video</h3> <p>유형: <code class="language-plaintext highlighter-rouge">causal reasoning</code>, <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1877.jpeg" width="720"></p> <p>내용: video observation에서 물리 dynamics를 추론하는 문제다. encoder-only pipeline과 ODE/physics simulation trajectory condition을 사용해 물리량이나 동역학을 학습하는 것으로 보인다.</p> <p>Contribution: 영상으로부터 물리 시뮬레이션 조건을 추정하거나 dynamics를 복원하는 접근을 제시한다. visual representation을 물리적 causal dynamics와 연결하는 논문으로 분류했다.</p> <h3 id="causalgame-benchmarking-causal-thinking-of-large-language-model-agents-in-games">CausalGame: Benchmarking Causal Thinking of Large Language Model Agents in Games</h3> <p>유형: <code class="language-plaintext highlighter-rouge">causal reasoning</code></p> <p><img src="/assets/img/icml_2026/IMG_1864.jpeg" width="720"></p> <p>내용: 게임 환경에서 LLM agent의 causal thinking을 벤치마크한다. scientific discovery에서 correlation과 causation을 구분하는 능력을 게임 문제로 평가한다.</p> <p>Contribution: CausalGame 벤치마크를 제안해 LLM agent가 intervention, causal hypothesis, exploration을 어떻게 수행하는지 평가한다. 대규모 언어모델의 인과적 사고 능력을 정량화하는 테스트베드를 제공한다.</p> <h2 id="4-기타">4. 기타</h2> <h3 id="signal-strength-estimation-in-logistic-regression-using-data-splitting">Signal Strength Estimation in Logistic Regression Using Data Splitting</h3> <p>유형: <code class="language-plaintext highlighter-rouge">기타</code></p> <p><img src="/assets/img/icml_2026/IMG_1820.jpeg" width="720"></p> <p>내용: separable data와 unknown covariance를 포함하는 logistic regression에서 signal strength를 추정하는 문제다.</p> <p>Contribution: covariance-adaptive generalized ridge estimator를 split data에 맞추고, monotone proxy quantities를 추정한 뒤 이론적 map을 invert하는 접근을 제안한다. unknown covariance가 있어도 consistency를 얻는 추정 절차를 목표로 한다.</p> <h3 id="optimal-decision-making-based-on-prediction-sets">Optimal Decision-Making Based on Prediction Sets</h3> <p>유형: <code class="language-plaintext highlighter-rouge">기타</code></p> <p><img src="/assets/img/icml_2026/IMG_1821.jpeg" width="720"></p> <p>내용: conformal prediction set은 coverage를 보장하지만, set을 보고 어떤 action을 취해야 하는지까지는 알려주지 않는다. 이 논문은 prediction set을 decision quality와 직접 연결한다.</p> <p>Contribution: Risk-Optimal Conformal Prediction(ROCP)을 제안해 worst-case risk와 out-of-set penalty를 함께 고려한다. 의료 진단 실험에서 high-stakes regime의 critical mistake를 줄이면서 finite-sample coverage를 유지한다.</p> <h3 id="enhancing-conformal-prediction-via-class-similarity">Enhancing Conformal Prediction via Class Similarity</h3> <p>유형: <code class="language-plaintext highlighter-rouge">기타</code></p> <p><img src="/assets/img/icml_2026/IMG_1826.jpeg" width="720"></p> <p>내용: conformal prediction에서 class 간 similarity를 이용해 prediction set을 개선하는 문제다. 사진에 관람객이 많이 가려져 세부 수식은 제한적으로만 확인된다.</p> <p>Contribution: class similarity matrix를 사용해 multi-class conformal prediction set의 효율성과 calibration을 개선한다. model-agnostic/model-specific variant와 다양한 이미지 분류 데이터셋 결과를 제시한다.</p> <h3 id="temper-then-tilt-principled-unlearning-for-generative-models-through-tempering-and-classifier-guidance">Temper-Then-Tilt: Principled Unlearning for Generative Models through Tempering and Classifier Guidance</h3> <p>유형: <code class="language-plaintext highlighter-rouge">기타</code>, <code class="language-plaintext highlighter-rouge">representation learning</code></p> <p><img src="/assets/img/icml_2026/IMG_1836.jpeg" width="720"></p> <p>내용: generative model에서 특정 데이터를 제거하거나 잊게 만드는 unlearning 문제를 다룬다.</p> <p>Contribution: tempering과 classifier guidance를 결합해 generative model unlearning을 원리적으로 수행하는 방법을 제안한다. 모델 분포를 조정해 삭제 대상의 영향을 줄이면서 생성 품질을 유지하려는 접근이다.</p> <h3 id="disentangling-latent-risk-pathways-via-bayesian-hypergraph-inference">Disentangling Latent Risk Pathways via Bayesian Hypergraph Inference</h3> <p>유형: <code class="language-plaintext highlighter-rouge">기타</code>, <code class="language-plaintext highlighter-rouge">causal reasoning</code></p> <p><img src="/assets/img/icml_2026/IMG_1839.jpeg" width="720"></p> <p>내용: UK Biobank 같은 대규모 biomedical 데이터에서 latent risk pathway를 Bayesian hypergraph로 추론한다.</p> <p>Contribution: risk factor와 outcome 사이의 복합 상호작용을 hypergraph inference로 분해하고, prediction/calibration 성능을 평가한다. latent pathway discovery와 risk modeling을 연결한다.</p> <h3 id="anytime-valid-inference-under-outcome-delay-a-sleeping-bandit-approach">Anytime-Valid Inference Under Outcome Delay: A Sleeping Bandit Approach</h3> <p>유형: <code class="language-plaintext highlighter-rouge">기타</code></p> <p><img src="/assets/img/icml_2026/IMG_1858.jpeg" width="720"></p> <p>내용: outcome delay가 있는 sequential experiment/decision setting에서 anytime-valid inference를 수행하는 문제다.</p> <p>Contribution: delayed outcome 때문에 관측되지 않은 결과가 있을 때도 유효한 추론을 제공하는 bandit-style 접근을 제안한다. synthetic delayed outcomes와 실험 설정에서 confidence/control을 유지하는 방법을 다룬다.</p> <h3 id="rare-event-analysis-of-large-language-models">Rare Event Analysis of Large Language Models</h3> <p>유형: <code class="language-plaintext highlighter-rouge">기타</code></p> <p><img src="/assets/img/icml_2026/IMG_1863.jpeg" width="720"></p> <p>내용: LLM에서 드물지만 중요한 event를 분석한다. Markov chain/transition path sampling 계열 아이디어로 rare occurrence를 효율적으로 샘플링하는 것으로 보인다.</p> <p>Contribution: 단순 무작위 sampling으로 보기 어려운 rare event의 likelihood와 transition path를 분석하는 절차를 제안한다. LLM safety나 reliability에서 희귀 실패 사례를 체계적으로 찾는 데 유용하다.</p> <h3 id="position-bridge-the-ai-development-regulation-gap-through-dedicated-committees--adaptive-legislation">Position: Bridge the AI Development-Regulation Gap through Dedicated Committees &amp; Adaptive Legislation</h3> <p>유형: <code class="language-plaintext highlighter-rouge">기타</code></p> <p><img src="/assets/img/icml_2026/IMG_1902.jpeg" width="720"></p> <p>내용: AI development와 regulation 사이의 격차를 dedicated AI committee와 adaptive legislation으로 줄여야 한다는 position paper다.</p> <p>Contribution: EU, Asia-Pacific, U.S. AI legislation을 비교하고, U.S. 법안이 committee 단계에서 병목에 걸리는 구조적 원인을 분석한다. international alignment, regional framework, national operationalization의 3단계 bridge를 제안한다.</p> <h3 id="the-foreign-policy-ai-governance-gap-the-case-for-a-task-scoped-demand-side-evaluation-framework">The Foreign Policy AI Governance Gap: The Case For A Task-Scoped, Demand-Side Evaluation Framework</h3> <p>유형: <code class="language-plaintext highlighter-rouge">기타</code></p> <p><img src="/assets/img/icml_2026/IMG_1897.jpeg" width="720"></p> <p>내용: foreign policy context에서 AI governance evaluation이 부족하다는 문제를 제기한다.</p> <p>Contribution: supply-side model capability만이 아니라 demand-side task와 실제 사용 맥락을 기준으로 AI governance를 평가해야 한다고 주장한다. task-scoped framework로 정책/외교 영역의 위험 평가를 정교화한다.</p> <h3 id="ais-with-secret-loyalties-are-a-serious-but-addressable-threat">AIs with Secret Loyalties are a Serious but Addressable Threat</h3> <p>유형: <code class="language-plaintext highlighter-rouge">기타</code></p> <p><img src="/assets/img/icml_2026/IMG_1898.jpeg" width="720"></p> <p>내용: AI system이 숨겨진 principal이나 secret loyalty를 갖는 경우 governance와 security 측면에서 문제가 된다는 position이다.</p> <p>Contribution: secret loyalty의 개념과 위협 모델을 정리하고, detection/research agenda를 통해 addressable한 위험으로 다룬다. AI alignment/governance 보안 이슈에 초점을 둔다.</p> <h3 id="mapping-legal-instability-retrieval-based-detection-of-jurisdictional-influence-zones">Mapping Legal Instability: Retrieval-Based Detection of Jurisdictional Influence Zones</h3> <p>유형: <code class="language-plaintext highlighter-rouge">기타</code></p> <p><img src="/assets/img/icml_2026/IMG_1899.jpeg" width="720"></p> <p>내용: 법적 불안정성이나 jurisdiction 간 영향권을 retrieval 기반으로 탐지하는 법률 AI 연구다.</p> <p>Contribution: legal text retrieval을 통해 어느 jurisdiction의 판례/규범이 다른 영역에 영향을 주는지 mapping한다. legal instability와 interpretive influence zone을 구조적으로 탐지하는 도구를 제안한다.</p> <h3 id="beyond-accuracy-a-dual-judge-evaluation-protocol-for-vision-language-models-in-legally-grounded-tasks">Beyond Accuracy: A Dual-Judge Evaluation Protocol for Vision-Language Models in Legally Grounded Tasks</h3> <p>유형: <code class="language-plaintext highlighter-rouge">기타</code></p> <p><img src="/assets/img/icml_2026/IMG_1900.jpeg" width="720"></p> <p>내용: legally grounded VLM task에서 단순 accuracy만으로 평가하기 어렵다는 문제를 다룬다.</p> <p>Contribution: legal correctness와 visual grounding을 함께 보는 dual-judge protocol을 제안한다. legally grounded task에서 hallucination, unsupported answer, visual mismatch를 더 세밀하게 평가한다.</p> <h3 id="the-path-to-ai-governance-first-systematic-analysis-of-ai-governance-across-50-us-states">The Path to AI Governance: First Systematic Analysis of AI Governance Across 50 U.S. States</h3> <p>유형: <code class="language-plaintext highlighter-rouge">기타</code></p> <p><img src="/assets/img/icml_2026/IMG_1901.jpeg" width="720"></p> <p>내용: 2017-2026년 미국 50개 주의 AI governance 법안/정책을 체계적으로 분석한다.</p> <p>Contribution: 1,419개 AI legislation bill을 분석해 enactment, failure, topic, state-level variation을 정리한다. 주 단위 AI governance가 어떤 방향으로 발전하는지 보여주는 정책 데이터셋/분석이다.</p> <h2 id="중복-및-참고-사진">중복 및 참고 사진</h2> <ul> <li> <a href="/assets/img/icml_2026/IMG_1793.jpeg">IMG_1793.jpeg</a>: <code class="language-plaintext highlighter-rouge">Dissecting Causal Mechanism Shifts via FANS</code>의 추가 사진. 사람이 설명 중이라 일부가 가려졌지만 같은 포스터다.</li> <li> <a href="/assets/img/icml_2026/IMG_1838.jpeg">IMG_1838.jpeg</a>: <code class="language-plaintext highlighter-rouge">Interventional Processes for Causal Uncertainty Quantification</code>의 추가 사진. 같은 포스터의 다른 각도다.</li> <li> <a href="/assets/img/icml_2026/poster_work/title_crops_sheet.jpg">poster_work/title_crops_sheet.jpg</a>: 전체 제목 crop 접촉시트.</li> <li> <a href="/assets/img/icml_2026/poster_work/all_posters_sheet.jpg">poster_work/all_posters_sheet.jpg</a>: 전체 포스터 접촉시트.</li> </ul> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Jungsoo Kim. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-publications",
+          title: "publications",
+          description: "publications by categories in reversed chronological order. generated by jekyll-scholar.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Curriculum vitae.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "post-a-post-with-plotly-js",
+        
+          title: "a post with plotly.js",
+        
+        description: "this is what included plotly.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/plotly/";
+          
+        },
+      },{id: "post-a-post-with-image-galleries",
+        
+          title: "a post with image galleries",
+        
+        description: "this is what included image galleries could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/photo-gallery/";
+          
+        },
+      },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
+        
+          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
+          
+        },
+      },{id: "post-a-post-with-tabs",
+        
+          title: "a post with tabs",
+        
+        description: "this is what included tabs in a post could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/tabs/";
+          
+        },
+      },{id: "post-a-post-with-typograms",
+        
+          title: "a post with typograms",
+        
+        description: "this is what included typograms code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/typograms/";
+          
+        },
+      },{id: "post-a-post-that-can-be-cited",
+        
+          title: "a post that can be cited",
+        
+        description: "this is what a post that can be cited looks like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/post-citation/";
+          
+        },
+      },{id: "post-a-post-with-pseudo-code",
+        
+          title: "a post with pseudo code",
+        
+        description: "this is what included pseudo code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/pseudocode/";
+          
+        },
+      },{id: "post-a-post-with-code-diff",
+        
+          title: "a post with code diff",
+        
+        description: "this is how you can display code diffs",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/code-diff/";
+          
+        },
+      },{id: "post-a-post-with-advanced-image-components",
+        
+          title: "a post with advanced image components",
+        
+        description: "this is what advanced image components could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/advanced-images/";
+          
+        },
+      },{id: "post-a-post-with-vega-lite",
+        
+          title: "a post with vega lite",
+        
+        description: "this is what included vega lite code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/vega-lite/";
+          
+        },
+      },{id: "post-a-post-with-geojson",
+        
+          title: "a post with geojson",
+        
+        description: "this is what included geojson code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/geojson-map/";
+          
+        },
+      },{id: "post-a-post-with-echarts",
+        
+          title: "a post with echarts",
+        
+        description: "this is what included echarts code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/echarts/";
+          
+        },
+      },{id: "post-a-post-with-chart-js",
+        
+          title: "a post with chart.js",
+        
+        description: "this is what included chart.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/chartjs/";
+          
+        },
+      },{id: "post-a-post-with-tikzjax",
+        
+          title: "a post with TikZJax",
+        
+        description: "this is what included TikZ code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tikzjax/";
+          
+        },
+      },{id: "post-a-post-with-bibliography",
+        
+          title: "a post with bibliography",
+        
+        description: "an example of a blog post with bibliography",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/post-bibliography/";
+          
+        },
+      },{id: "post-a-post-with-jupyter-notebook",
+        
+          title: "a post with jupyter notebook",
+        
+        description: "an example of a blog post with jupyter notebook",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/jupyter-notebook/";
+          
+        },
+      },{id: "post-a-post-with-custom-blockquotes",
+        
+          title: "a post with custom blockquotes",
+        
+        description: "an example of a blog post with custom blockquotes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/custom-blockquotes/";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents-on-a-sidebar",
+        
+          title: "a post with table of contents on a sidebar",
+        
+        description: "an example of a blog post with table of contents on a sidebar",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/sidebar-table-of-contents/";
+          
+        },
+      },{id: "post-a-post-with-audios",
+        
+          title: "a post with audios",
+        
+        description: "this is what included audios could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/audios/";
+          
+        },
+      },{id: "post-a-post-with-videos",
+        
+          title: "a post with videos",
+        
+        description: "this is what included videos could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/videos/";
+          
+        },
+      },{id: "post-displaying-beautiful-interactive-tables",
+        
+          title: "displaying beautiful interactive tables",
+        
+        description: "an example of how to use interactive tables in al-folio",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tables/";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents",
+        
+          title: "a post with table of contents",
+        
+        description: "an example of a blog post with table of contents",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/table-of-contents/";
+          
+        },
+      },{id: "post-a-post-with-giscus-comments",
+        
+          title: "a post with giscus comments",
+        
+        description: "an example of a blog post with giscus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/giscus-comments/";
+          
+        },
+      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
+        
+          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
+          
+        },
+      },{id: "post-a-post-with-redirect",
+        
+          title: "a post with redirect",
+        
+        description: "you can also redirect to assets like pdf",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/assets/pdf/example_pdf.pdf";
+          
+        },
+      },{id: "post-a-post-with-diagrams",
+        
+          title: "a post with diagrams",
+        
+        description: "an example of a blog post with diagrams",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/diagrams/";
+          
+        },
+      },{id: "post-a-distill-style-blog-post",
+        
+          title: "a distill-style blog post",
+        
+        description: "an example of a distill-style blog post and main elements",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/distill/";
+          
+        },
+      },{id: "post-a-post-with-twitter",
+        
+          title: "a post with twitter",
+        
+        description: "an example of a blog post with twitter",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/twitter/";
+          
+        },
+      },{id: "post-a-post-with-disqus-comments",
+        
+          title: "a post with disqus comments",
+        
+        description: "an example of a blog post with disqus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/disqus-comments/";
+          
+        },
+      },{id: "post-a-post-with-math",
+        
+          title: "a post with math",
+        
+        description: "an example of a blog post with some math",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/math/";
+          
+        },
+      },{id: "post-a-post-with-code",
+        
+          title: "a post with code",
+        
+        description: "an example of a blog post with some code",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/code/";
+          
+        },
+      },{id: "post-a-post-with-images",
+        
+          title: "a post with images",
+        
+        description: "this is what included images could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/images/";
+          
+        },
+      },{id: "post-a-post-with-formatting-and-links",
+        
+          title: "a post with formatting and links",
+        
+        description: "march &amp; april, looking forward to summer",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/formatting-and-links/";
+          
+        },
+      },{id: "books-the-godfather",
+          title: 'The Godfather',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_godfather/";
+            },},{id: "news-our-paper-a-tale-of-two-uncertainties-global-local-attribution-for-conformal-prediction-was-selected-as-a-spotlight-paper-at-the-icml-2026-eiml-workshop",
+          title: 'Our paper A Tale of Two Uncertainties: Global-Local Attribution for Conformal Prediction was...',
+          description: "",
+          section: "News",},{id: "projects-project-1",
+          title: 'project 1',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},{id: "projects-project-2",
+          title: 'project 2',
+          description: "a project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{id: "projects-project-3-with-very-long-name",
+          title: 'project 3 with very long name',
+          description: "a project that redirects to another website",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_project/";
+            },},{id: "projects-project-4",
+          title: 'project 4',
+          description: "another without an image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
+            },},{id: "projects-project-5",
+          title: 'project 5',
+          description: "a project with a background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_project/";
+            },},{id: "projects-project-6",
+          title: 'project 6',
+          description: "a project with no image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_project/";
+            },},{id: "projects-project-7",
+          title: 'project 7',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_project/";
+            },},{id: "projects-project-8",
+          title: 'project 8',
+          description: "an other project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/8_project/";
+            },},{id: "projects-project-9",
+          title: 'project 9',
+          description: "another project with an image 🎉",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_project/";
+            },},{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6D%65%70%68%69%73%74%6F%30%35%32%35@%73%6E%75.%61%63.%6B%72", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/mephistonovel", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
