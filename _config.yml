@@ -7,9 +7,9 @@ first_name: Jungsoo
 middle_name:
 last_name: Kim
 contact_note: >
- Feel free to contact me via email mephisto0525@snu.ac.kr
+  Feel free to contact me via email mephisto0525@snu.ac.kr
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
- Ph.D. student at Seoul National University working on Causal Inference in bio-medical data, Representation Learning, and Trustworthy Machine Learning.
+  Ph.D. student at Seoul National University working on Causal Inference in bio-medical data, Representation Learning, and Trustworthy Machine Learning.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.

@@ -10,7 +10,7 @@ cv:
       username: mephistonovel
   custom_connections:
     - placeholder: kimjs0619@naver.com
-      url: mailto:kimjs0619@naver.com
+      url: null # RenderCV custom connections accept HTTP(S) URLs or null, not mailto.
       fontawesome_icon: envelope
 
   sections:
