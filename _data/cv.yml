@@ -44,6 +44,12 @@ cv:
         end_date: 2020-02
 
     Publications:
+      - title: "Decomposing Conformal Uncertainty: Calibration- and Instance-Driven Feature Attribution"
+        authors: []
+        journal: Advances in Neural Information Processing Systems (NeurIPS)
+        date: "2026"
+        summary: Accepted as a poster.
+
       - title: "A Tale of Two Uncertainties: Global-Local Attribution for Conformal Prediction"
         authors:
           - Sangyeon Cho
