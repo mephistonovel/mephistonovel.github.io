@@ -35,7 +35,7 @@ cv:
         end_date: 2024-08
         highlights:
           - "GPA: 4.22/4.5"
-          - "Course project (High Performance Computing): GRU-based name generation using C/C++ and CUDA."
+          - "Course Project: Implemented and parallelized a GRU-based name generation model from scratch using C/C++ and CUDA as part of a high-performance computing course."
       - institution: Yonsei University, Underwood International College
         location: Seoul, Korea
         degree: B.P.A. / B.B.
