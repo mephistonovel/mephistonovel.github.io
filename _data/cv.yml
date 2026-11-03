@@ -13,10 +13,9 @@ cv:
       url: null # RenderCV custom connections accept HTTP(S) URLs or null, not mailto.
       fontawesome_icon: envelope
   sections:
-    Research Profile:
-      - Research on uncertainty and reliability in AI across healthcare, policy evaluation, and evidentiary use, combining conformal prediction,
-        causal representation learning, and image restoration with hands-on experimental design, implementation, and quantitative and qualitative
-        evaluation.
+    Research Interests:
+      - Uncertainty quantification and reliability in AI; conformal prediction and interpretable uncertainty; causal representation learning under
+        unobserved confounding; reliability of AI-enhanced imagery. Applications span healthcare, policy evaluation, and evidentiary use.
     Education:
       - institution: Seoul National University, Graduate School of Data Science
         location: Seoul, Korea
@@ -84,8 +83,8 @@ cv:
           - "*Jungsoo Kim*"
           - Heejin Kim
           - Sanghack Lee
-        journal: Manuscript under review
-        summary: Under review.
+        journal: Humanities and Social Sciences Communications (Springer Nature)
+        summary: Revised and resubmitted; under review.
     Selected Research Projects:
       - name: Conformal uncertainty and patient-specific retesting
         highlights:
