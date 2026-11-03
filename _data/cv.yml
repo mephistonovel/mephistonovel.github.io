@@ -12,20 +12,28 @@ cv:
     - placeholder: kimjs0619@naver.com
       url: null # RenderCV custom connections accept HTTP(S) URLs or null, not mailto.
       fontawesome_icon: envelope
-
   sections:
+    Research Profile:
+      - Research on uncertainty and reliability in AI across healthcare, policy evaluation, and evidentiary use, combining conformal prediction,
+        causal representation learning, and image restoration with hands-on experimental design, implementation, and quantitative and qualitative
+        evaluation.
     Education:
       - institution: Seoul National University, Graduate School of Data Science
         location: Seoul, Korea
-        degree: Master
+        degree: Ph.D.
+        area: Data Science
+        start_date: 2024-09
+        end_date: present
+        highlights:
+          - "Advisor: Sanghack Lee; Causality Lab."
+      - institution: Seoul National University, Graduate School of Data Science
+        location: Seoul, Korea
+        degree: M.S.
         area: Data Science
         start_date: 2022-03
         end_date: 2024-08
         highlights:
           - "GPA: 4.22/4.5"
-          - "Courses: Convex Optimization, High Performance Computing, Big Data and Knowledge Management System, Causal Inference"
-          - "Teaching Assistant: Causal Inference, Machine Learning and Deep Learning II, Basic Statistics & Mathematics Bootcamp"
-
       - institution: Yonsei University, Underwood International College
         location: Seoul, Korea
         degree: B.P.A. / B.B.
@@ -34,22 +42,23 @@ cv:
         end_date: 2022-02
         highlights:
           - "GPA: 4.15/4.5"
-          - "Courses: Mathematical Statistics, Regression Analysis, Econometrics, Survival Data Analysis, Time Series Analysis, IT and Socio-Economic Change, Principles of Financial Engineering"
-
       - institution: National University of Singapore, Yale-NUS College
         location: Singapore
         degree: Exchange Student
         area: Mathematical and Computational Science
         start_date: 2019-09
         end_date: 2020-02
-
-    Publications:
+    Selected Publications:
       - title: "Decomposing Conformal Uncertainty: Calibration- and Instance-Driven Feature Attribution"
-        authors: []
+        authors:
+          - Sangyeon Cho
+          - Minyoung Cho
+          - "*Jungsoo Kim*"
+          - Sujeong Oh
+          - Sanghack Lee
         journal: Advances in Neural Information Processing Systems (NeurIPS)
         date: "2026"
-        summary: Accepted as a poster.
-
+        summary: "Accepted as a poster. Equal contribution (co-first authors): Sangyeon Cho, Minyoung Cho, and Jungsoo Kim."
       - title: "A Tale of Two Uncertainties: Global-Local Attribution for Conformal Prediction"
         authors:
           - Sangyeon Cho
@@ -60,8 +69,7 @@ cv:
         journal: ICML 2026 Workshop on Epistemic Intelligence in Machine Learning (EIML)
         date: "2026"
         url: https://openreview.net/forum?id=2aIvedJMpp
-        summary: Spotlight paper.
-
+        summary: "Spotlight paper; earlier workshop version of the NeurIPS 2026 paper. Equal contribution (co-first authors): Sangyeon Cho, Minyoung Cho, and Jungsoo Kim."
       - title: Instrumental Variable Representation Learning under Confounded Covariates
         authors:
           - "*Jungsoo Kim*"
@@ -70,102 +78,88 @@ cv:
           - Sanghack Lee
         journal: "NeurIPS 2025 Workshop on CauScien: Uncovering Causality in Science"
         date: "2025"
-
-      - title: "Diagonal Argument: Anthology of 5th POSTECH SF Award-Winning Works"
+      - title: "When Mass Atrocities Come to Light in the Artificial Eyes in the Sky: AI and the Use of Satellite Images for International Criminal
+          Accountability"
         authors:
-          - Geonryul Park
-          - Huyeong Lee
           - "*Jungsoo Kim*"
-        journal: Eunhengnamu
-        date: "2025"
-        url: https://product.kyobobook.co.kr/detail/S000217575854
-        summary: "Chapter: *Will of Stochastic Ghost*. ISBN: 9791167375810."
-
+          - Heejin Kim
+          - Sanghack Lee
+        journal: Manuscript under review
+        summary: Under review.
+    Selected Research Projects:
+      - name: Conformal uncertainty and patient-specific retesting
+        highlights:
+          - "Originated the motivating use case and led experimental design: constructed semi-synthetic data from real sepsis data and designed a
+            risk score with patient-specific retesting needs."
+          - Compared retest-variable selection using total attribution, equal calibration/instance weighting, and greater instance weighting; showed
+            that emphasizing the test instance better prioritized patient-specific retest variables under a limited testing budget in simulation.
+      - name: Instrumental variable representation learning under confounded covariates
+        highlights:
+          - Conceived the research question and designed an architecture to learn IV representations from high-dimensional covariates correlated with
+            unobserved confounders, targeting causal effect estimation under weaker assumptions.
+          - Implemented the model, ran the experiments, and wrote the manuscript, carrying the project from initial concept through empirical evaluation.
+      - name: Reliability of AI-enhanced satellite imagery as evidence
+        highlights:
+          - Investigated the reliability of AI-enhanced satellite imagery for international criminal accountability; ran model inference across 15
+            super-resolution setups and conducted quantitative and qualitative analyses.
+          - Combined quantitative and qualitative evidence of reliability limitations with analysis of international criminal accountability, highlighting
+            risks of the evaluated AI-enhanced imagery as evidence; manuscript under review.
     Research and Industrial Experience:
       - company: Ministry of Food and Drug Safety (MFDS) Project
         position: Project Lead for Causal Inference Section
         start_date: 2025-03
         end_date: 2025-12
         highlights:
-          - Led an MFDS project on drug-effect estimation using conformal prediction.
-          - Developed methods for interpretable uncertainty quantification as part of a research team.
-
+          - Led the causal inference section of the MFDS project, applying conformal prediction to analyses of statin effects on blood glucose.
+          - Investigated variation in prediction interval widths across individuals; this practical problem motivated subsequent research on feature
+            attribution for conformal uncertainty.
       - company: SK Center for Social Value Enhancement Studies
         position: Research Assistant
         start_date: 2021-08
         end_date: 2022-01
         highlights:
-          - Reviewed beneficiaries' financial records totaling 10 billion KRW and estimated the next fiscal year's budget.
-          - Researched trends in the Korean social economy, focusing on economic polarization and building a research database.
-
+          - Analyzed beneficiary financial records totaling KRW 10 billion, estimated the following fiscal year's budget, and built a research database
+            on the Korean social economy.
       - company: Mooncademy (Korean Traditional Music Education Start-up)
         position: Product Manager
         start_date: 2020-10
         end_date: 2021-04
         highlights:
-          - Planned website information architecture and page layouts for a Korean traditional music platform, collaborating with engineers and designers.
-          - Launched a Wadiz crowdfunding campaign for gayageum lectures, raising KRW 10,491,700.
-          - Presented the 2021 annual plan at an investor relations meeting.
-
-    Leadership and Involvement:
-      - name: Coding Instructor for Malaysian High School Students
-        date: "2025-07 to 2025-08"
-        summary: Taught Python programming and basic algorithms through an SNU Language Education Institute outreach program. Designed interactive sessions emphasizing teamwork and oral presentation to discourage reliance on generative AI tools and foster authentic problem-solving.
-
-      - name: Manager and Main Speaker for STP-STS Forum
-        date: "2022-05"
-        summary: Organized and hosted a department forum for students and faculty in Science & Technology Studies at Seoul National University and Science & Technology Policy at Yonsei University, while researching legal controversies in medical law regarding tattooing.
-
-      - name: Project Management Director at Social Innovation Creators' Academy
-        date: "2019-03 to 2020-06"
-        summary: Managed cross-team project schedules and deliverables, coordinated milestones across multiple teams, and developed a semester-long project roadmap.
-
-      - name: Yonsei Business College Drama Club (Yonsang-geuk-u-hoi)
-        date: "2017-03 to 2021-10"
-        summary: Led production planning and mediated creative discussions across five productions. Designed a fully remote event in response to COVID-19 constraints.
-
-      - name: Vice President in Major Student Council
-        date: "2017-11 to 2018-11"
-        summary: Liaised with faculty on curricular and administrative issues and planned major information sessions and inter-major forums on science fiction.
-
-    Honors and Awards:
+          - Planned website information architecture with engineers and designers; launched a gayageum lecture crowdfunding campaign raising KRW 10,491,700.
+    Teaching and Service:
+      - name: Teaching Assistant, Seoul National University
+        summary: Causal Inference; Machine Learning and Deep Learning II; Basic Statistics & Mathematics Bootcamp.
+      - name: Python Instructor, SNU Language Education Institute Outreach
+        date: 2025-07 to 2025-08
+        summary: Taught Python and basic algorithms to Malaysian high school students, emphasizing collaborative problem-solving.
+    Selected Honors and Writing:
       - name: 5th POSTECH SF Award, Excellence Prize
         date: "2025"
-        summary: Authored a short story exploring conflicts surrounding generative-AI-based evidence.
-
+        summary: Authored "Will of Stochastic Ghost," published in Diagonal Argument (Eunhengnamu, 2025); fiction exploring generative AI and evidence.
       - name: Journal of Korea Artificial Intelligence Association, Best Paper
         date: "2024"
         summary: Submitted a master's project paper on instrumental variables.
-
       - name: CSES Social Value Research Idea Award, Excellence Prize
         date: "2024"
         summary: Proposed a study on causal structure analysis for Korean population policy.
-
       - name: LH COMPAS Land & City Data Competition, Excellence Prize
         date: "2024"
         summary: Identified medically underserved areas in Asan through geospatial analysis.
-
       - name: EdTech Data Analysis Hackathon, Grand Prize
         date: "2023"
         summary: Built a dropout-prediction model using survival analysis.
-
       - name: Public BigData Analysis Hackathon, Excellence Prize
         date: "2020"
         summary: Developed a traffic-accident risk model with XGBoost and interpreted drivers using SHAP.
-
-      - name: Art Data Hackathon
-        date: "2020"
-        summary: Designed a traditional musical-instrument recommendation system.
-
-    Skills and Language:
-      - label: Programming and Data Systems
-        details: R, Python, C++, C, SQL, Neo4J, BigQuery, Kafka
-
-      - label: Machine Learning and Causal Inference
-        details: Fine-tuning super-resolution models, training Stable Diffusion with PyTorch, geospatial data analysis with GeoPandas and QGIS, instrumental variable analysis, conformal prediction
-
+    Skills and Languages:
+      - label: Programming
+        details: Python, R, C++, C, SQL
+      - label: Research Methods
+        details: Conformal prediction and uncertainty quantification; instrumental variables and causal representation learning; experimental design;
+          quantitative and qualitative model evaluation
+      - label: ML and Geospatial Tools
+        details: PyTorch; super-resolution and diffusion model workflows (SRCNN, SRGAN, StableSR, Stable Diffusion); GeoPandas, QGIS
+      - label: Data Systems
+        details: Neo4j, BigQuery; Kafka (event streaming)
       - label: Languages
-        details: Korean, English (TOEFL 100, OPIc AL)
-
-      - label: Productivity
-        details: Microsoft Word, PowerPoint, Excel, Overleaf
+        details: Korean, English (TOEFL 100; OPIc AL)
