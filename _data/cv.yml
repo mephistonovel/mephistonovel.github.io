@@ -13,9 +13,11 @@ cv:
       url: null # RenderCV custom connections accept HTTP(S) URLs or null, not mailto.
       fontawesome_icon: envelope
   sections:
+    # Custom section titles use the plugin's generic renderer, which reads `bullet`.
+    # Keep each web display bullet aligned with its structured RenderCV entry.
     Research Interests:
-      - Uncertainty quantification and reliability in AI; conformal prediction and interpretable uncertainty; causal representation learning under
-        unobserved confounding; reliability of AI-enhanced imagery. Applications span healthcare, policy evaluation, and evidentiary use.
+      - bullet: Uncertainty quantification and reliability in AI; conformal prediction and interpretable uncertainty; causal representation learning
+          under unobserved confounding; reliability of AI-enhanced imagery. Applications span healthcare, policy evaluation, and evidentiary use.
     Education:
       - institution: Seoul National University, Graduate School of Data Science
         location: Seoul, Korea
@@ -58,6 +60,9 @@ cv:
         journal: Advances in Neural Information Processing Systems (NeurIPS)
         date: "2026"
         summary: "Accepted as a poster. Equal contribution (co-first authors): Sangyeon Cho, Minyoung Cho, and Jungsoo Kim."
+        bullet: "**Decomposing Conformal Uncertainty: Calibration- and Instance-Driven Feature Attribution**. Sangyeon Cho, Minyoung Cho, *Jungsoo
+          Kim*, Sujeong Oh, Sanghack Lee. *Advances in Neural Information Processing Systems (NeurIPS)* (2026). Accepted as a poster. Equal contribution
+          (co-first authors): Sangyeon Cho, Minyoung Cho, and Jungsoo Kim."
       - title: "A Tale of Two Uncertainties: Global-Local Attribution for Conformal Prediction"
         authors:
           - Sangyeon Cho
@@ -68,7 +73,11 @@ cv:
         journal: ICML 2026 Workshop on Epistemic Intelligence in Machine Learning (EIML)
         date: "2026"
         url: https://openreview.net/forum?id=2aIvedJMpp
-        summary: "Spotlight paper; earlier workshop version of the NeurIPS 2026 paper. Equal contribution (co-first authors): Sangyeon Cho, Minyoung Cho, and Jungsoo Kim."
+        summary: "Spotlight paper; earlier workshop version of the NeurIPS 2026 paper. Equal contribution (co-first authors): Sangyeon Cho, Minyoung
+          Cho, and Jungsoo Kim."
+        bullet: "**A Tale of Two Uncertainties: Global-Local Attribution for Conformal Prediction**. Sangyeon Cho, Minyoung Cho, *Jungsoo Kim*,
+          Sujeong Oh, Sanghack Lee. *ICML 2026 Workshop on Epistemic Intelligence in Machine Learning (EIML)* (2026). Spotlight paper; earlier workshop
+          version of the NeurIPS 2026 paper. Equal contribution (co-first authors): Sangyeon Cho, Minyoung Cho, and Jungsoo Kim."
       - title: Instrumental Variable Representation Learning under Confounded Covariates
         authors:
           - "*Jungsoo Kim*"
@@ -77,6 +86,8 @@ cv:
           - Sanghack Lee
         journal: "NeurIPS 2025 Workshop on CauScien: Uncovering Causality in Science"
         date: "2025"
+        bullet: "**Instrumental Variable Representation Learning under Confounded Covariates**. *Jungsoo Kim*, Kwonho Kim, Inwoo Hwang, Sanghack
+          Lee. *NeurIPS 2025 Workshop on CauScien: Uncovering Causality in Science* (2025). "
       - title: "When Mass Atrocities Come to Light in the Artificial Eyes in the Sky: AI and the Use of Satellite Images for International Criminal
           Accountability"
         authors:
@@ -85,6 +96,9 @@ cv:
           - Sanghack Lee
         journal: Humanities and Social Sciences Communications (Springer Nature)
         summary: Revised and resubmitted; under review.
+        bullet: "**When Mass Atrocities Come to Light in the Artificial Eyes in the Sky: AI and the Use of Satellite Images for International Criminal
+          Accountability**. *Jungsoo Kim*, Heejin Kim, Sanghack Lee. *Humanities and Social Sciences Communications (Springer Nature)*. Revised
+          and resubmitted; under review."
     Selected Research Projects:
       - name: Conformal uncertainty and patient-specific retesting
         highlights:
@@ -92,17 +106,29 @@ cv:
             risk score with patient-specific retesting needs."
           - Compared retest-variable selection using total attribution, equal calibration/instance weighting, and greater instance weighting; showed
             that emphasizing the test instance better prioritized patient-specific retest variables under a limited testing budget in simulation.
+        bullet: "**Conformal uncertainty and patient-specific retesting**. Originated the motivating use case and led experimental design: constructed
+          semi-synthetic data from real sepsis data and designed a risk score with patient-specific retesting needs. Compared retest-variable selection
+          using total attribution, equal calibration/instance weighting, and greater instance weighting; showed that emphasizing the test instance
+          better prioritized patient-specific retest variables under a limited testing budget in simulation."
       - name: Instrumental variable representation learning under confounded covariates
         highlights:
           - Conceived the research question and designed an architecture to learn IV representations from high-dimensional covariates correlated with
             unobserved confounders, targeting causal effect estimation under weaker assumptions.
           - Implemented the model, ran the experiments, and wrote the manuscript, carrying the project from initial concept through empirical evaluation.
+        bullet: "**Instrumental variable representation learning under confounded covariates**. Conceived the research question and designed an
+          architecture to learn IV representations from high-dimensional covariates correlated with unobserved confounders, targeting causal effect
+          estimation under weaker assumptions. Implemented the model, ran the experiments, and wrote the manuscript, carrying the project from initial
+          concept through empirical evaluation."
       - name: Reliability of AI-enhanced satellite imagery as evidence
         highlights:
           - Investigated the reliability of AI-enhanced satellite imagery for international criminal accountability; ran model inference across 15
             super-resolution setups and conducted quantitative and qualitative analyses.
           - Combined quantitative and qualitative evidence of reliability limitations with analysis of international criminal accountability, highlighting
             risks of the evaluated AI-enhanced imagery as evidence; manuscript under review.
+        bullet: "**Reliability of AI-enhanced satellite imagery as evidence**. Investigated the reliability of AI-enhanced satellite imagery for
+          international criminal accountability; ran model inference across 15 super-resolution setups and conducted quantitative and qualitative
+          analyses. Combined quantitative and qualitative evidence of reliability limitations with analysis of international criminal accountability,
+          highlighting risks of the evaluated AI-enhanced imagery as evidence; manuscript under review."
     Research and Industrial Experience:
       - company: Ministry of Food and Drug Safety (MFDS) Project
         position: Project Lead for Causal Inference Section
@@ -112,6 +138,10 @@ cv:
           - Led the causal inference section of the MFDS project, applying conformal prediction to analyses of statin effects on blood glucose.
           - Investigated variation in prediction interval widths across individuals; this practical problem motivated subsequent research on feature
             attribution for conformal uncertainty.
+        bullet: "**Ministry of Food and Drug Safety (MFDS) Project — Project Lead for Causal Inference Section** (2025-03–2025-12). Led the causal
+          inference section of the MFDS project, applying conformal prediction to analyses of statin effects on blood glucose. Investigated variation
+          in prediction interval widths across individuals; this practical problem motivated subsequent research on feature attribution for conformal
+          uncertainty."
       - company: SK Center for Social Value Enhancement Studies
         position: Research Assistant
         start_date: 2021-08
@@ -119,37 +149,60 @@ cv:
         highlights:
           - Analyzed beneficiary financial records totaling KRW 10 billion, estimated the following fiscal year's budget, and built a research database
             on the Korean social economy.
+        bullet: "**SK Center for Social Value Enhancement Studies — Research Assistant** (2021-08–2022-01). Analyzed beneficiary financial records
+          totaling KRW 10 billion, estimated the following fiscal year's budget, and built a research database on the Korean social economy."
       - company: Mooncademy (Korean Traditional Music Education Start-up)
         position: Product Manager
         start_date: 2020-10
         end_date: 2021-04
         highlights:
           - Planned website information architecture with engineers and designers; launched a gayageum lecture crowdfunding campaign raising KRW 10,491,700.
+        bullet:
+          "**Mooncademy (Korean Traditional Music Education Start-up) — Product Manager** (2020-10–2021-04). Planned website information architecture
+          with engineers and designers; launched a gayageum lecture crowdfunding campaign raising KRW 10,491,700."
     Teaching and Service:
       - name: Teaching Assistant, Seoul National University
         summary: Causal Inference; Machine Learning and Deep Learning II; Basic Statistics & Mathematics Bootcamp.
+        bullet: "**Teaching Assistant, Seoul National University**. Causal Inference; Machine Learning and Deep Learning II; Basic Statistics &
+          Mathematics Bootcamp."
       - name: Python Instructor, SNU Language Education Institute Outreach
         date: 2025-07 to 2025-08
         summary: Taught Python and basic algorithms to Malaysian high school students, emphasizing collaborative problem-solving.
+        bullet:
+          "**Python Instructor, SNU Language Education Institute Outreach** (2025-07 to 2025-08). Taught Python and basic algorithms to Malaysian
+          high school students, emphasizing collaborative problem-solving."
     Selected Honors and Writing:
       - name: 5th POSTECH SF Award, Excellence Prize
         date: "2025"
         summary: Authored "Will of Stochastic Ghost," published in Diagonal Argument (Eunhengnamu, 2025); fiction exploring generative AI and evidence.
+        bullet: '**5th POSTECH SF Award, Excellence Prize** (2025). Authored "Will of Stochastic Ghost," published in Diagonal Argument (Eunhengnamu,
+          2025); fiction exploring generative AI and evidence.'
       - name: Journal of Korea Artificial Intelligence Association, Best Paper
         date: "2024"
         summary: Submitted a master's project paper on instrumental variables.
+        bullet: "**Journal of Korea Artificial Intelligence Association, Best Paper** (2024). Submitted a master's project paper on instrumental
+          variables."
       - name: CSES Social Value Research Idea Award, Excellence Prize
         date: "2024"
         summary: Proposed a study on causal structure analysis for Korean population policy.
+        bullet:
+          "**CSES Social Value Research Idea Award, Excellence Prize** (2024). Proposed a study on causal structure analysis for Korean population
+          policy."
       - name: LH COMPAS Land & City Data Competition, Excellence Prize
         date: "2024"
         summary: Identified medically underserved areas in Asan through geospatial analysis.
+        bullet:
+          "**LH COMPAS Land & City Data Competition, Excellence Prize** (2024). Identified medically underserved areas in Asan through geospatial
+          analysis."
       - name: EdTech Data Analysis Hackathon, Grand Prize
         date: "2023"
         summary: Built a dropout-prediction model using survival analysis.
+        bullet: "**EdTech Data Analysis Hackathon, Grand Prize** (2023). Built a dropout-prediction model using survival analysis."
       - name: Public BigData Analysis Hackathon, Excellence Prize
         date: "2020"
         summary: Developed a traffic-accident risk model with XGBoost and interpreted drivers using SHAP.
+        bullet: "**Public BigData Analysis Hackathon, Excellence Prize** (2020). Developed a traffic-accident risk model with XGBoost and interpreted
+          drivers using SHAP."
     Skills and Languages:
       - label: Programming
         details: Python, R, C++, C, SQL
